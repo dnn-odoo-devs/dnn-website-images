@@ -1,0 +1,60 @@
+/* 
+   DNN Website Images - Base Gallery Styles
+   Estándar de Simetría V1.0
+*/
+
+.dnn_gallery_container {
+    .dnn_gallery_item {
+        position: relative;
+        overflow: hidden;
+        /* Forzar geometría rígida del contenedor */
+        aspect-ratio: 1 / 1; 
+        background-color: #f8f9fa; /* Fondo neutro para contain */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            transition: transform 0.3s ease;
+            
+            /* Clases configurables vía snippet options */
+            &.dnn_fit_contain {
+                object-fit: contain;
+            }
+            &.dnn_fit_cover {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Overlay para Títulos (Variante Link) */
+        .dnn_gallery_title_overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 8px;
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+
+            &.dnn_title_always {
+                opacity: 1;
+            }
+        }
+
+        &:hover .dnn_title_hover {
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_dnn_gallery_grid" name="DNN Galería Grid (Navegación)">
+        <section class="s_dnn_gallery_grid dnn_gallery_container pt40 pb40">
+            <div class="container">
+                <div class="row dnn_gallery_row">
+                    <!-- Placeholder con Título para el editor -->
+                    <div class="col-lg-3 dnn_gallery_item mb-4">
+                        <a href="#">
+                            <img src="/web/static/img/placeholder.png" class="img-fluid dnn_fit_contain" alt="Grid Placeholder"/>
+                            <div class="dnn_gallery_title_overlay dnn_title_always">
+                                <span>Título Placeholder</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

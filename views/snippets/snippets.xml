@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Registro del Snippet en el Bloque de 'Dynamic Content' o 'Images' -->
+    <template id="dnn_website_images_snippets" inherit_id="website.snippets">
+        <xpath expr="//div[@id='snippet_content']//div[@class='o_panel_body']" position="inside">
+            <t t-snippet="dnn_website_images.s_dnn_gallery_lightbox" t-thumbnail="/dnn_website_images/static/description/icon.png"/>
+            <t t-snippet="dnn_website_images.s_dnn_gallery_grid" t-thumbnail="/dnn_website_images/static/description/icon.png"/>
+        </xpath>
+    </template>
+
+    <!-- Opciones del Snippet (Panel Lateral) -->
+    <template id="s_dnn_gallery_options" inherit_id="website.snippet_options">
+        <xpath expr="." position="inside">
+            <div data-js="DnnGalleryOptions" data-selector=".s_dnn_gallery_lightbox, .s_dnn_gallery_grid">
+                <we-row string="Contenido">
+                    <we-button data-select-images="true" class="o_we_bg_brand_primary">Seleccionar Imágenes</we-button>
+                </we-row>
+                <we-select string="Columnas" data-no-preview="true">
+                    <we-button data-select-class="col-lg-6" data-name="col_6">2 Columnas</we-button>
+                    <we-button data-select-class="col-lg-4" data-name="col_4">3 Columnas</we-button>
+                    <we-button data-select-class="col-lg-3" data-name="col_3">4 Columnas</we-button>
+                    <we-button data-select-class="col-lg-2" data-name="col_2">6 Columnas</we-button>
+                </we-select>
+                <we-select string="Ajuste de Imagen" data-attribute-name="imgFit">
+                    <we-button data-select-class="dnn_fit_contain">Ajustar (Contain)</we-button>
+                    <we-button data-select-class="dnn_fit_cover">Rellenar (Cover)</we-button>
+                </we-select>
+                <we-select string="Visibilidad Título" data-attribute-name="titleVisibility">
+                    <we-button data-select-class="dnn_title_always">Siempre</we-button>
+                    <we-button data-select-class="dnn_title_hover">Al Hover</we-button>
+                </we-select>
+            </div>
+        </xpath>
+    </template>
+</odoo>

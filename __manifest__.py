@@ -14,12 +14,16 @@ Este módulo proporciona snippets de alto impacto visual para el manejo de imág
     'author': 'DNN Group / ARIA',
     'depends': ['website'],
     'data': [
-        # 'views/snippets/gallery_templates.xml',
+        'views/snippets/snippets.xml',
+        'views/snippets/gallery_lightbox.xml',
+        'views/snippets/gallery_grid_link.xml',
     ],
     'assets': {
         'web.assets_frontend': [
-            # 'dnn_website_images/static/src/scss/gallery_styles.scss',
-            # 'dnn_website_images/static/src/js/gallery_lightbox.js',
+            'dnn_website_images/static/src/scss/gallery_base.scss',
+        ],
+        'website.assets_wysiwyg': [
+            'dnn_website_images/static/src/js/gallery_options.js',
         ],
     },
     'installable': True,

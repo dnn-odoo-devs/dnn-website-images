@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_dnn_gallery_lightbox" name="DNN Galería Lightbox">
+        <section class="s_dnn_gallery_lightbox dnn_gallery_container pt40 pb40">
+            <div class="container">
+                <div class="row dnn_gallery_row">
+                    <!-- Placeholder inicial para el editor -->
+                    <div class="col-lg-3 dnn_gallery_item mb-4">
+                        <img src="/web/static/img/placeholder.png" class="img-fluid dnn_fit_contain" alt="Lightbox Placeholder"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>
