@@ -1,6 +1,7 @@
 {
     'name': 'DNN Website Images',
-    'version': '18.0.1.0.0.2',
+    'version': '18.0.1.0.0',
+    'dnn_version_iteration': '2',
     'category': 'Website',
     'summary': 'Módulo base para la gestión avanzada de imágenes y galerías DNN.',
     'description': """
